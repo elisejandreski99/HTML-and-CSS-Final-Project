@@ -1,0 +1,46 @@
+@font-face {
+    font-family:montserrat-black;
+    src:url(../fonts/montserrat-black.otf);
+ }
+ @font-face {
+    font-family:montserrat-medium;
+    src:url(../fonts/montserrat-medium.otf);
+ }
+*{
+    font-family: montserrat-medium;
+    color: white;
+    
+}
+body{
+    background-image: url(../media/geoshapes.jpg);
+    background-position: center;
+    background-size: cover;
+    box-sizing: border-box;
+}
+h1{
+    text-shadow: 5px 5px black;
+    text-align: center;
+    margin-top: 10%;
+    color: #a5a5a5;
+    font-size: 3em;
+}
+.countdown{
+    display: flex;
+    justify-content: center;
+    border: 5px solid #ec3a7b;
+    
+}
+.countdown div{
+    border: none;
+    padding: 5%;
+    
+}
+.countdown div p{
+    font-size: 3em;
+}.countdown div span{
+    font-size: 2em;
+    
+}
+.countdown div p, .countdown div span{
+    color: white;
+}

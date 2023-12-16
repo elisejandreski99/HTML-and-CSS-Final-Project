@@ -1,0 +1,224 @@
+* {
+    box-sizing: border-box;
+    color: white;
+}
+@font-face {
+    font-family:montserrat-black;
+    src:url(../fonts/montserrat-black.otf);
+ }
+ @font-face {
+    font-family:montserrat-medium;
+    src:url(../fonts/montserrat-medium.otf);
+ }
+h1{
+    font-family: montserrat-black;
+    font-size: 9vw;
+    color: white;
+    /*text-shadow: 1.25vw 1.25vw black;*/
+    -webkit-box-reflect: below 1px linear-gradient(transparent,#0008);
+    line-height: .70em;
+    outline: none;
+    animation: animate 5s linear;
+    animation-fill-mode: forwards;
+}
+@keyframes animate
+{
+    0%
+    {  
+        color:rgb(33, 33, 33);
+        text-shadow: none;
+    }
+    100%
+    {
+        color: white;
+        text-shadow: 0 0 10px #eb2b82,
+        0 0 15px #b05f6d,
+        0 0 20px #aa7651,
+        0 0 25px #a88054,
+        0 0 160px #aea69c;
+    }
+}
+h2{
+    font-family: montserrat-black;
+    font-size: 3vw;
+    color:#f68333;
+    margin-top: 10%;
+}
+div{
+    border: solid rgb(14, 14, 14) 10px;
+    background-color: rgb(33, 33, 33);
+    
+}
+body {
+	font-family:montserrat-medium;
+	font-size:1.5em;
+	background-color:rgb(14, 14, 14);
+    
+}
+nav {
+	width:100%;
+	height:auto;
+    background-color:rgb(14, 14, 14);
+    text-align:left;
+    clear:both;
+    float:left;
+    margin-top: -15px;
+}
+#countdown{
+    background-color: #f42fd0;
+}
+#about{
+    background-color: #f42f89;
+}
+#register{
+    background-color: #f33f5e;
+}
+#learn{
+    background-color: #f2a142;
+}
+nav a {
+    text-decoration:none;
+    border-radius: 0 30px 30px 0;
+    margin-left: -15%;
+    padding: 10%;
+    margin-bottom: 5%;
+    text-indent: 6%;
+}
+nav ul li {
+	list-style:none;
+	margin-left:-35px;
+}
+
+nav ul li a:link, nav ul li a:visited {
+    display:block;
+    color:rgb(34, 34, 34);
+   	text-decoration:none;
+}
+nav ul li a:hover, nav ul li a:active{
+    display:block;
+    color:white;
+}
+
+header{
+	width:100%;
+	top:0%;
+	color:white;
+	padding:20px;
+	background-color:rgb(24, 24, 24);
+    text-align:center;
+    
+}
+main{
+	background:rgb(14, 14, 14);
+    
+}
+aside {
+    background: rgb(14, 14, 14);
+}
+footer {
+    background-color: rgb(39, 39, 39);
+    text-align: right;
+    font-size: 12px;
+    padding: 15px;
+}
+div{
+    padding: 5%;
+}
+.date{
+    padding: 3%;
+    font-size: 2.4em;
+    border: 2px solid #f42f89;
+    text-align: center;
+    text-shadow: 5px 5px black;
+    height: fit-content;
+}
+.middle{
+    margin-top: -5%;
+    
+}
+.icon-bar {
+    width: 100%; /* Full-width */
+    background-color: #f68333;
+    padding: 1.5%;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    border: none;
+    overflow: auto; /* Overflow due to float */
+}
+
+.icon-bar a {
+    float: left; /* Float links side by side */
+    text-align: center; /* Center-align text */
+    width: 20%; /* Equal width (5 icons with 20% width each = 100%) */
+    transition: all 0.3s ease; /* Add transition for hover effects */
+    color: black;
+    font-size: 36px; /* Increased font size */
+}
+
+.icon-bar a:hover {
+    background-color: black;
+}
+#timer{
+  text-align: center;
+  
+  
+}
+.counter{
+    padding: 0;
+    border-radius: 30px;
+    margin-bottom: 5%;
+}
+
+/*grid classes*/
+.header{grid-area: h;}
+.menu{grid-area: m;}
+.middle{grid-area: mid;}
+.right{grid-area: r;}
+.footer{grid-area: f;}
+.date{grid-area: d;}
+
+
+.grid-container{
+    gap: 2%;
+}    
+
+/*mobile grid container*/
+
+	.grid-container{
+		grid-template-areas:
+			'h h h h h h' 
+			'm m m m m m'
+            'd d d d d d'
+			'mid mid mid mid mid mid'
+            'r r r r r r'
+            'f f f f f f';
+	}
+
+
+@media only screen and (min-width: 600px) {
+    .grid-container{
+        display: grid;
+        grid-template-rows: max-content;
+        grid-template-areas: 
+        'h h h h h h'
+        'd d d d d d'
+        'm m m mid mid mid'
+        'r r r mid mid mid'
+        'f f f f f f';
+    }
+}
+
+/*default grid container*/
+@media only screen and (min-width: 768px){
+    .grid-container {
+        display: grid;
+        grid-template-rows: max-content;
+        grid-template-areas: 
+            'h h h h h h h h'
+            'm m d d d d r r'
+            'm m mid mid mid mid r r'
+            'm m mid mid mid mid i i'
+            'f f f f f f f f';
+        }
+    }
+    
